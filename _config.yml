@@ -1,0 +1,33 @@
+title: Usage Panda | Docs
+description: Usage Panda Documentation
+theme: just-the-docs
+
+url: https://docs.usagepanda.com
+
+aux_links:
+  Home: https://usagepanda.com
+  Sign In: https://app.usagepanda.com/signin
+  # Blog: https://blog.usagepanda.com
+
+logo: "/assets/images/logo-white.svg"
+favicon_ico: "/assets/images/favicon.ico"
+color_scheme: light
+
+footer_content: "Copyright 2023 • Usage Panda"
+
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub."
+gh_edit_repository: https://github.com/UsagePanda/docs
+gh_edit_branch: "main"
+gh_edit_view_mode: "tree"
+
+callouts:
+  note:
+    title: Note
+    color: blue
+  warning:
+    title: Warning
+    color: yellow
+
+twitter:
+  username: UsagePanda
