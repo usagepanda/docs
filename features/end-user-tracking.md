@@ -1,6 +1,7 @@
 ---
 layout: default
 title: End-User Tracking
+description: Usage Panda supports tracking of end-users of your application and association with OpenAI costs, errors, and content moderation.
 parent: Features
 ---
 

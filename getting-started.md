@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+description: Learn how to register for Usage Panda and begin using it to layer production features over your usage of OpenAI APIs.
 layout: default
 nav_order: 2
 ---
