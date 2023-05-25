@@ -2,7 +2,7 @@
 title: Use Cases
 layout: default
 description: Usage Panda is built for developers who are looking to safely use OpenAI LLM APIs in their production applications.
-nav_order: 3
+nav_order: 5
 has_children: true
 ---
 
