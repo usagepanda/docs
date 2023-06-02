@@ -3,6 +3,7 @@ layout: default
 title: Content Blocking and Moderation
 description: Usage Panda provides extensive custom content blocking and moderation controls for OpenAI API requests.
 parent: Features
+nav_order: 6
 ---
 
 # Content Blocking

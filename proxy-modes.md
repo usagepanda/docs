@@ -2,7 +2,7 @@
 title: Proxy Modes
 description: Usage Panda supports both cloud and self-hosted proxies for ease-of-use and security.
 layout: default
-nav_order: 3
+nav_order: 4
 ---
 
 # Proxy Modes

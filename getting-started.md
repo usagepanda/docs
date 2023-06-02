@@ -23,34 +23,37 @@ Usage Panda does not use passwords. Please sign up using an email address you ha
 
 ## Configuring Usage Panda
 
-To use Usage Panda, you must first configure a **connection** from the "Connections" page. Each connection is assigned a Usage Panda API key. Think of a connection as an OpenAI-compatible endpoint that enforces custom policies (which you define).
+To use Usage Panda, you must first configure an **API Key** from the [API Keys](https://app.usagepanda.com/connections?new=true) page. An API key allows you to connect to Usage Panda via an OpenAI-compatible endpoint through which you can define and enforce custom policies.
+
+![New API Key](assets/images/usage-panda-new-key.png)
 
 You must then make two small changes to your application environment:
 1. Set `openai.api_base` to `"https://proxy.usagepanda.com"`
-2. Set `openai.api_key` to a combined string containing your OpenAI API key _and_ your Usage Panda connection API key.
+2. Pass the `x-usagepanda-api-key` header in your requests
 
 ```python
 openai.api_base = "https://proxy.usagepanda.com"
-openai.api_key = "sk-abcdefg123456789//up-abcdefg123456789"
-```
+openai.api_key = "sk-..."
 
-No other code changes are required. The next time your application makes a call to the OpenAI API, it will be routed through the Usage Panda proxy where your custom policy will be enforced.
-
-By default, Usage Panda does not apply any additional policy controls (it simply passes the request and response through). However, you should be able to see your requests on the "Logs" page as soon as they are sent.
-
-You can try the Python example below to test out your connection.
-
-```python
 response = openai.ChatCompletion.create(
-  model="gpt-3.5-turbo",
-  messages=[
-        {"role": "system", "content": "You are a helpful assistant"},
-        {"role": "user", "content": "Hello, who are you?"}
-    ]
+    model="gpt-3.5-turbo",
+    messages=[
+            {"role": "system", "content": "You are a helpful assistant"},
+            {"role": "user", "content": "Hello there"}
+    ],
+    headers={ # Usage Panda Auth
+        "x-usagepanda-api-key": "up-..."
+    }
 )
-output = response.choices[0].message
-print(output)
 ```
+
+No other code changes are required. The next time your application makes a call to the OpenAI API, it will be routed through the Usage Panda proxy where your custom policy will be enforced and metrics will be collected. You can view your requests on the [Logs](https://app.usagepanda.com/records) page in real-time.
+
+By default, Usage Panda does not apply any additional policy controls (it simply passes the request and response through and records usage metrics, such as cost and latency). However, you should be able to see your requests on the "Logs" page as soon as they are sent.
+
+You will also see your dashboard populated with usage metrics, cost data, etc.
+
+![Dashboard](assets/images/usage-panda-dashboard.png)
 
 ## Next Steps
-Once Usage Panda is working, you can begin configuring policies on your connection.
+Once Usage Panda is working, you can begin configuring policies on your connection. Check out the [Features](/features.html) page for a list of available policies and controls.
