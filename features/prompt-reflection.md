@@ -54,6 +54,6 @@ output = response.choices[0].text
 
 ## Flagged Requests
 
-Requests that are blocked because of the max tokens setting will be flagged in the logs:
+Requests that are blocked because of the prompt reflection setting will be flagged in the logs:
 
-![Usage Panda Max Tokens Flag](../assets/images/usage-panda-max-tokens-flag.png)
+![Usage Panda Prompt Reflection Flag](../assets/images/usage-panda-prompt-reflection.png)
