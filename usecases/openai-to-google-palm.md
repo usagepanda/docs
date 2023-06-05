@@ -10,6 +10,9 @@ parent: Use Cases
 
 With many new LLM APIs emerging, it can be challenging to update your application to support each new provider, given the differences in API format and supported features. Usage Panda makes it easy to switch between OpenAI and Google PalM APIs with a simple tweak to your existing codebase. Usage Panda then converts the request and response formats dynamically via its proxy.
 
+{: .warning }
+This is an experimental feature and the Google PaLM API is in preview. API formats may change without notice.
+
 ## Pre-Requisites
 Before you can take advantage of this feature, you must have a Google PaLM API key, which you can obtain from the [Google Maker Suite](https://makersuite.google.com/). You may need to join a waitlist if you don't already have access. You can test that your key is working using the following curl command:
 
