@@ -2,6 +2,7 @@
 layout: default
 title: Switch Between OpenAI and Google PaLM APIs
 description: Usage Panda can dynamically route requests between OpenAI and Google PaLM using the same OpenAI API format.
+image: /assets/images/covers/openai-to-google-palm.png
 parent: Use Cases
 ---
 
