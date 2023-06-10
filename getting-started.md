@@ -28,11 +28,11 @@ To use Usage Panda, you must first configure an **API Key** from the [API Keys](
 ![New API Key](assets/images/usage-panda-new-key.png)
 
 You must then make two small changes to your application environment:
-1. Set `openai.api_base` to `"https://proxy.usagepanda.com"`
+1. Set `openai.api_base` to `"https://proxy.usagepanda.com/v1"`
 2. Pass the `x-usagepanda-api-key` header in your requests
 
 ```python
-openai.api_base = "https://proxy.usagepanda.com"
+openai.api_base = "https://proxy.usagepanda.com/v1"
 openai.api_key = "sk-..."
 
 response = openai.ChatCompletion.create(

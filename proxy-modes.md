@@ -11,7 +11,7 @@ Usage Panda functions as a proxy between your application or developers and Open
 
 ## Cloud Mode Proxy
 
-With cloud mode, there is no infrastructure to manage. Simply generate your Usage Panda API key, point your application to the `https://proxy.usagepanda.com` endpoint and begin sending requests. Usage Panda will handle scaling, updates, and other operational aspects.
+With cloud mode, there is no infrastructure to manage. Simply generate your Usage Panda API key, point your application to the `https://proxy.usagepanda.com/v1` endpoint and begin sending requests. Usage Panda will handle scaling, updates, and other operational aspects.
 
 ![New API Key](assets/images/usage-panda-api-key.png)
 
@@ -21,7 +21,7 @@ In your application code, update the OpenAI endpoint and pass the Usage Panda AP
 import openai
 
 openai.api_key = "sk-openaiapikey"
-openai.api_base = "https://proxy.usagepanda.com"
+openai.api_base = "https://proxy.usagepanda.com/v1"
 
 response = openai.ChatCompletion.create(
   model="gpt-3.5-turbo",

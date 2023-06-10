@@ -30,7 +30,7 @@ From here, you can adjust your codebase to instruct Usage Panda on how it should
 
 ```python
 import openai
-openai.api_base = "https://proxy.usagepanda.com"
+openai.api_base = "https://proxy.usagepanda.com/v1"
 openai.api_key = "sk-your-openai-key"
 PALM_KEY="your-google-palm-key"
 USAGE_PANDA_KEY="up-your-usage-panda-key"
